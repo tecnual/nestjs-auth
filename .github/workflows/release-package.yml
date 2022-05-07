@@ -1,4 +1,4 @@
-name: @tecnual/nestjs-auth
+name: nestjs-auth module
 
 on:
   release:

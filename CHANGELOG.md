@@ -1,4 +1,8 @@
-#### 1.0.1 (2022-05-07)
+#### 1.0.2 (2022-05-07)
+
+##### Bug Fixes
+
+*  release-package.yml ([4803ff4a](https://github.com/tecnual/nestjs-auth/commit/4803ff4aacfc7152a8d5793111092068957ab4df))
 
 ##### New Features
 
