@@ -1,6 +1,6 @@
 {
   "name": "@tecnual/nestjs-auth",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "NestJS Authentication module",
   "author": "Tecnual <pedro@tecnual.com>",
   "license": "MIT",
@@ -19,7 +19,10 @@
     "test": "jest",
     "test:watch": "jest --watch",
     "test:cov": "jest --coverage",
-    "test:e2e": "jest --config ./test/jest-e2e.json"
+    "test:e2e": "jest --config ./test/jest-e2e.json",
+    "release:major": "changelog -M && git add CHANGELOG.md && git commit -m 'updated CHANGELOG.md' && npm version major --no-git-tag-version && git push origin && git push origin --tags",
+    "release:minor": "changelog -m && git add CHANGELOG.md && git commit -m 'updated CHANGELOG.md' && npm version minor --no-git-tag-version && git push origin && git push origin --tags",
+    "release:patch": "changelog -p && git add CHANGELOG.md && git commit -m 'updated CHANGELOG.md' && npm version patch --no-git-tag-version && git push origin && git push origin --tags"
   },
   "keywords": [
     "nestjs",
