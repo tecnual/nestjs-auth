@@ -1,0 +1,88 @@
+{
+  "name": "@tecnual/nestjs-auth",
+  "version": "1.0.0",
+  "description": "NestJS Authentication module",
+  "author": "Tecnual <pedro@tecnual.com>",
+  "license": "MIT",
+  "readmeFilename": "README.md",
+  "main": "dist/index.js",
+  "files": [
+    "dist/**/*",
+    "*.md"
+  ],
+  "scripts": {
+    "start:dev": "tsc -w",
+    "build": "tsc",
+    "prepare": "npm run build",
+    "format": "prettier --write \"src/**/*.ts\"",
+    "lint": "tslint -p tsconfig.json -c tslint.json",
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "test:cov": "jest --coverage",
+    "test:e2e": "jest --config ./test/jest-e2e.json"
+  },
+  "keywords": [
+    "nestjs",
+    "auth",
+    "authentication"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tecnual/nestjs-auth.git"
+  },
+  "bugs": "https://github.com/tecnual/nestjs-auth",
+  "peerDependencies": {
+    "@nestjs/common": "^8.0.0"
+  },
+  "devDependencies": {
+    "@nestjs/common": "^8.0.0",
+    "@nestjs/core": "^8.0.0",
+    "@nestjs/platform-express": "^8.0.0",
+    "@nestjs/testing": "8.0.0",
+    "@types/express": "^4.17.13",
+    "@types/jest": "27.4.1",
+    "@types/node": "^16.11.32",
+    "@types/passport-jwt": "^3.0.6",
+    "@types/passport-local": "^1.0.34",
+    "@types/supertest": "^2.0.11",
+    "@typescript-eslint/eslint-plugin": "^5.21.0",
+    "@typescript-eslint/parser": "^5.21.0",
+    "jest": "^27.2.5",
+    "node-mocks-http": "^1.11.0",
+    "prettier": "^2.3.2",
+    "supertest": "^6.1.3",
+    "ts-jest": "^27.0.3",
+    "ts-node": "^10.0.0",
+    "tsc-watch": "2.2.1",
+    "tsconfig-paths": "^3.10.1",
+    "typescript": "^4.3.5"
+  },
+  "jest": {
+    "moduleFileExtensions": [
+      "js",
+      "json",
+      "ts"
+    ],
+    "rootDir": "src",
+    "testRegex": ".spec.ts$",
+    "transform": {
+      "^.+\\.(t|j)s$": "ts-jest"
+    },
+    "coverageDirectory": "../coverage",
+    "testEnvironment": "node"
+  },
+  "dependencies": {
+    "@nestjs/config": "^2.0.0",
+    "@nestjs/jwt": "^8.0.0",
+    "@nestjs/mongoose": "^9.0.3",
+    "@nestjs/passport": "^8.2.1",
+    "class-transformer": "^0.5.1",
+    "class-validator": "^0.13.2",
+    "passport": "^0.5.2",
+    "passport-jwt": "^4.0.0",
+    "passport-local": "^1.0.0"
+  }
+}
