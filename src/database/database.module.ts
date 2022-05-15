@@ -7,11 +7,10 @@ import { MongooseModule } from '@nestjs/mongoose';
     MongooseModule.forRootAsync({
       imports: [ConfigModule],
       useFactory: async (configService: ConfigService) => {
-        const dbUrl = 'mongodb+srv://'+ configService.get<string>('database.username') +':' + configService.get<string>('database.password') +'@cluster0.gu0r4.mongodb.net/'+ configService.get<string>('database.dbName') +'?retryWrites=true&w=majority';
         return ({
           autoIndex: true,
           useNewUrlParser: true,
-          uri: dbUrl
+          uri: configService.get('database.url')
         })
       },
       inject: [ConfigService]
@@ -22,4 +21,4 @@ import { MongooseModule } from '@nestjs/mongoose';
 /**
  * MongoDb provider
  */
-export class MongoProviderModule { }
+export class DatabaseModule { }

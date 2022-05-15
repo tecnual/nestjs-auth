@@ -28,7 +28,7 @@ export interface Response<T> {
     return next.handle().pipe(map(data => {
       if (this.config.get('verbose')) {
         data.timestamp = new Date().toISOString();
-        data.auth_user = context.switchToHttp().getRequest().user.username;
+        data.auth_user = context.switchToHttp().getRequest().user;
       }
       return data
     }));
