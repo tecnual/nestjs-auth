@@ -1,3 +1,9 @@
+#### 1.0.5 (2022-05-15)
+
+##### Bug Fixes
+
+*  delete users provider ([e6a8fad6](https://github.com/tecnual/nestjs-auth/commit/e6a8fad6d93a669a5966871624965c79f8f8c0b9))
+
 #### 1.0.4 (2022-05-15)
 
 ##### New Features
